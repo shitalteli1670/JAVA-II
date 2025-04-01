@@ -14,7 +14,7 @@ class ThreadName_Priority extends Thread {
         
         t1.start();
         try {
-            t1.join();  // Handle InterruptedException
+            t1.join(); 
         } catch (InterruptedException e) {
             System.out.println("Thread interrupted: " + e.getMessage());
         }

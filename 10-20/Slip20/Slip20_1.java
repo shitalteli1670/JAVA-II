@@ -9,7 +9,8 @@
     <%-- Retrieve the input number from the request --%>
     <% 
         String numberStr = request.getParameter("number");
-        if(numberStr != null && !numberStr.isEmpty()) {
+        if(numberStr != null && !numberStr.isEmpty()) 
+        {
             // Array to store the word representations of digits
             String[] words = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
             
@@ -17,7 +18,8 @@
             int number = Integer.parseInt(numberStr);
             // Convert the number to words
             String numberInWords = "";
-            while (number > 0) {
+            while (number > 0) 
+            {
                 int digit = number % 10;
                 numberInWords = words[digit] + " " + numberInWords;
                 number = number / 10;
