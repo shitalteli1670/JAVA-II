@@ -64,3 +64,20 @@ class Slip1_2_JDBC extends JFrame implements ActionListener
 	new Slip1_2_JDBC();
 	}
 }
+
+/*
+sudo -u postgres psql
+CREATE DATABASE testdb;
+\c testdb
+
+CREATE TABLE employee (
+    emp_no INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    emp_designation VARCHAR(50),
+    emp_salary INT
+);
+
+javac -cp .:postgresql-42.7.5.jar Slip1_2_JDBC.java
+java -cp .:postgresql-42.7.5.jar Slip1_2_JDBC
+
+*/
