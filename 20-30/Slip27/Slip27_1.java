@@ -9,7 +9,7 @@ public class Slip27_1 extends JFrame {
 
             // Load PostgreSQL driver and establish a connection
             Class.forName("org.postgresql.Driver");
-            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "postgres", "123");
+            Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "postgres", "root");
 
             // Query to fetch all records from the "college" table
             String query = "SELECT * FROM college";
@@ -58,7 +58,7 @@ sudo /opt/tomcat/bin/startup.sh
 
  sudo -u postgres psql
 
-postgres=# \c testdb
+postgres=# \c testdb or create database testdb;
 You are now connected to database "testdb" as user "postgres".
 testdb=# CREATE TABLE college (
     CID SERIAL PRIMARY KEY,
